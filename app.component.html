@@ -1,0 +1,64 @@
+<nav class="navbar navbar-expand-md navbar-light bg-primary">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                      
+      </button>
+      <a class="navbar-brand" href="#">User</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+    <ul class="nav navbar-nav n1">
+      <li>
+        <a  routerLink="/Home" routerLinkActive="active" >Home</a>
+      </li>
+      <li>
+        <a  routerLink="/service" routerLinkActive="active" >Services</a>
+      </li>
+      <li>
+        <a  routerLink="/portfolio" routerLinkActive="active">Portfolio</a>
+      </li>
+      <li>
+        <a  routerLink="/careers" routerLinkActiv="active">Careers</a>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav pull-right">
+      <li>
+        <a routerLink="/Login&signup" routerLinkActive="active">
+          <span class="glyphicon glyphicon-user"></span> Login&Signup</a>
+      </li>
+    </ul>
+    </div>
+  </div>
+</nav><br/>
+
+  <router-outlet></router-outlet>
+
+  <!--footer-->
+  <footer style="background-color: lightblue;">
+    <div class="row">
+      <div class="col-md-4 ft-1">
+        <h2 text-center><strong>Angular</strong></h2>
+         <ul>
+           <li>Home</li>
+           <li>Portfolio</li>
+           <li>Careers</li>
+         </ul>
+      </div>
+      <div class="col-md-4 ft-2">
+        <h3 text-center><strong>Contact Us</strong></h3>
+        <p><span class="glyphicon glyphicon-map-marker"> Coimbatore</span></p>
+        <p><span class="glyphicon glyphicon-phone"> 8876456272</span></p>
+        <p><span class="glyphicon glyphicon-envelope"> abc@gmail.com</span></p>
+      </div><br/>
+      <div class="col-md-4 ft-3 form-group">
+        <textarea class="form-control" name="comment" placeholder="comment" ></textarea>
+        <br/>
+        <button class="btn btn-default pull-right" type="submit">Send</button>
+      </div>
+    </div>
+  </footer>
+
+  
+ 

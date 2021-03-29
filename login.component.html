@@ -1,0 +1,69 @@
+<div class="container">
+    <div class="row">
+      <form  [formGroup] ='profile'(ngsubmit)="callingFunction()">
+        <h2 class="text-center">{{text}}</h2>
+      <mat-tab-group mat-align-tabs="start">
+        <mat-tab label="Login">
+      <div class="form-group">
+    <label> Username </label>
+    <input type="text" name="username" formControlName="username"  placeholder="username">
+    </div>
+    <br/>
+    <br/>
+    <div class="form-group">
+    <label> Password </label>
+    <input type="password" name="password" minlength="3"  formControlName="password" placeholder="password">
+      </div><br/><br/>
+      <div class="m1">
+        <button (click)="callingFunction()" type="Submit" class="btn btn-default"
+        [disabled]="!profile.valid">Login</button>
+      </div>
+    </mat-tab>
+    <!--Signup-->
+    <mat-tab label="Signup">
+      <div class="container">
+        <div class="row">
+            <div class="col-md-12 u1">
+                        <h2 class="center-align">User Registartion</h2>
+                    </div>
+                    <div class="st-1">
+                    <form [formGroup]='register'class="col-md-6" (ngSubmit)="reg()">
+                        <div class="row">
+                            <div class="input-field col-6">
+  
+                            <input type="text" formControlName="username" placeholder="username">
+                                </div>
+                                </div>
+                        <div class="row">
+                            <div class="input-field col-6">
+                                <input type="email" formControlName="Email" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col-6">
+                            <input type="Password" minlength="3" formControlName="Password"  placeholder="Password">
+                    </div>
+                </div>
+                    <div class="row">
+                    <div class="input-field col-6">
+                        <input type="Password"minlength="3" formControlName="ConformPassword"  placeholder="ConformPassword">
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col-6 m2">
+                    <button (click)="reg()"  type="Submit" class="btn btn-default"  
+                    [disabled]="!register.valid">Submit</button>
+                </div>
+            </div>
+                    </form>
+                </div>
+            </div>
+            </div>
+  
+    </mat-tab>
+  </mat-tab-group>
+  </form>
+  </div>
+  </div>
+  
+  
